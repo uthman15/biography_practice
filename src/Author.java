@@ -1,4 +1,15 @@
+import java.util.ArrayList;
+
 public class Author {
+
+    public Author(String firstName, String lastName, String country, boolean isAlive, int age, ArrayList<Book> books) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.country = country;
+        this.isAlive = isAlive;
+        this.age = age;
+        this.books = books;
+    }
 
     /**
      * WORK ON BOOK CLASS FIRST
@@ -15,11 +26,34 @@ public class Author {
         NOTE: Books must be defined as a List of Objects of Book class not String
     */
     //YOUR CODE HERE
-
+    public String firstName;
+    public String lastName;
+    public String country;
+    public boolean isAlive;
+    public int age;
+    public ArrayList<Book> books;
 
     /*
     Override toString() method here that returns Author object information
      */
     //YOUR CODE HERE
 
+    @Override
+    public String toString() {
+        if(isAlive) {
+            return "Author{" +
+                    "firstName='" + firstName + '\'' +
+                    ", lastName='" + lastName + '\'' +
+                    ", country='" + country + '\'' +
+                    ", isAlive=" + isAlive +
+                    ", age=" + age +
+                    '}';
+
+        }else return "Author{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", country='" + country + '\'' +
+                ", isAlive=" + isAlive +
+                '}';
+    }
 }
